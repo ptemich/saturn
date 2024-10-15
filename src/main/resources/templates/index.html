@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html data-theme="dark" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Bulma!</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
+    <body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Hello World
+            </h1>
+            <p class="subtitle">
+                My first website with <strong>Bulma</strong>!
+            </p>
+
+            <div>
+                <h2>Welcome test3, <span th:text="${session.userName}">User</span>!</h2>
+                <ul>
+                    <li th:each="item : ${items}" th:text="${item.name}">Item Name</li>
+                    <li th:if="${session.isAdmin}" th:text="'Admin Access Granted'"></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container" th:insert="fragments.html :: frag1">
+            <p>ORYGINALNY KAWAŁEK z insertem</p>
+        </div>
+
+        <div class="container" th:replace="fragments.html :: frag1">
+            <p>ORYGINALNY KAWAŁEK z replace - będzie brakować DIV'a !</p>
+        </div>
+
+
+        <div class="container" th:insert="fragments.html :: fragWithParams(paramA = 'test1', paramB = 'test2')">
+            <p>Wersja z parametrami</p>
+        </div>
+    </section>
+    </body>
+</html>

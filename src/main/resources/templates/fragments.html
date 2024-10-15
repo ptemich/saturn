@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="frag1">
+    <h1>HEADER</h1>
+    <p>Content goes here</p>
+</div>
+
+
+<div th:fragment="fragWithParams (paramA, paramB)">
+    <h1 th:text="${paramA}" class="is-size-1"></h1>
+    <p th:text="${paramB}"></p>
+    <!--
+    <div>
+        <label th:for="${#strings.toLowerCase(field)}"> <span
+                th:text="${field}">Field</span>
+        </label>
+    </div>
+    <div>
+        <input type="text" th:id="${#strings.toLowerCase(field)}"
+               th:name="${#strings.toLowerCase(field)}" th:value="${value}"
+               th:size="${size}">
+    </div>
+    -->
+</div>
