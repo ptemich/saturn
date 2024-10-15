@@ -1,4 +1,4 @@
-package pl.ptemich.templates_demo.model.jupiter;
+package pl.ptemich.templates_demo.model.saturn;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -10,17 +10,17 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
-public class Workstream extends AbstractEntity {
+@Entity
+public class Task extends AbstractEntity {
 
     private String name;
 
     @ManyToOne
-    private Project project;
+    private Process process;
 
-    @OneToMany(mappedBy = "workstream", cascade = CascadeType.ALL)
-    private List<Process> processes = new ArrayList<>();
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
+    private List<DocumentLinking> linkings = new ArrayList<>();
 
 }

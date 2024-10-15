@@ -4,8 +4,8 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.ptemich.templates_demo.model.ProjectRepository;
-import pl.ptemich.templates_demo.model.jupiter.*;
-import pl.ptemich.templates_demo.model.jupiter.Process;
+import pl.ptemich.templates_demo.model.saturn.*;
+import pl.ptemich.templates_demo.model.saturn.Process;
 
 @Service
 @RequiredArgsConstructor

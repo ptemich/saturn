@@ -1,4 +1,4 @@
-package pl.ptemich.templates_demo.model.jupiter;
+package pl.ptemich.templates_demo.model.saturn;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
